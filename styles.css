@@ -203,7 +203,7 @@ footer {
   background: hsl(0, 35%, 93%);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 955px) {
 
   body {
     background: rgb(230, 219, 219);
@@ -214,7 +214,7 @@ footer {
   }
 
   header, .dropdown-container, .slideshow-container, main, footer {
-    width: 90vw;
+    width: 92vw;
     max-width: 1024px;
   }
   
@@ -247,15 +247,15 @@ footer {
   .dropdown-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    position: static;
   }
 
   .dropdown-container > a {
-    flex: 1 1 125px;
-    font-size: large;
+    padding-inline: 10px;
+    padding-block: 20px;
+    display: flex;
+    justify-content: center;
+    line-height: 1.25em;
   }
-
 
   article :is(p, h2, h3, h4, dl) {
     padding-inline: 100px;
