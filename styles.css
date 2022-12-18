@@ -38,6 +38,10 @@ h3 {
   background: hsl(0, 37%, 77%);
 }
 
+dt {
+  font-weight: 600;
+}
+
 body {
   font-size: large;
   font-family: 'Barlow', sans-serif;
