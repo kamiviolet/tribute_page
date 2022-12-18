@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   outline: 0;
@@ -181,9 +185,9 @@ article a:last-of-type {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding-block-start: 75px;
+  padding-block-start: 100px;
 
-  height: 175px;
+  height: 200px;
   mask-image: linear-gradient(to top, black 75%, transparent 100%);
 }
 
