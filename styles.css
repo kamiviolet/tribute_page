@@ -132,7 +132,7 @@ nav {
 
 @keyframes fadein {
   from {
-    opacity: 0.75;
+    opacity: 0;
   }  
   to {
     opacity: 1;
@@ -230,7 +230,7 @@ footer {
     font-size: larger;
     color: white;
     background: hsl(0, 28%, 54%);
-    box-shadow: rgba(42, 25, 25, 0.6) -10px 5px 3px;
+    box-shadow: rgba(42, 25, 25, 0.6) 10px 5px 3px;
     z-index: 10;
     animation: fadein 3s;
   }
