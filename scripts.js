@@ -24,6 +24,14 @@ const slides = [
     alt: "Kayan and her son Aki with fallen leaves, 2014 Autumn",
     src: "images/tribute_03.jpg",
   },
+  {
+    alt: "Kayan and her son Aki in sunflower field, 2017 Summer",
+    src: "images/tribute_04.jpg",
+  },
+  {
+    alt: "Kayan with her Hong Kong family and her Japanese boss",
+    src: "images/tribute_06.jpg",
+  },
 ];
 const slideshowWrapper = document.querySelector(".slideshow-container");
 

@@ -140,10 +140,10 @@ article :is(h2, h3, dl) {
 }
 
 article :is(p, h2, h3, h4, dl) {
-  padding-inline: 30px;
+  padding-inline: 55px;
 }
 
-article p:first-of-type::first-letter {
+:is(h2,h3,h4) + p::first-letter {
   font-size: xx-large;
 }
 
@@ -159,7 +159,6 @@ article a:last-of-type {
   color:hsl(36, 24%, 22%);
   text-align: center;
 
-  padding-inline: 1.5em;
   background-color: hsl(56, 100%, 97%);
 }
 
@@ -253,7 +252,10 @@ footer {
     font-size: large;
   }
 
-  article:first-of-type {
-    padding-inline: 5em;
+
+  article :is(p, h2, h3, h4, dl) {
+    padding-inline: 100px;
   }
+
+
 }
