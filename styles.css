@@ -7,13 +7,17 @@ a {
   color: darkred;
 }
 
-blockquote p {
+.quote {
   font-weight: 600;
   font-style: italic;
 }
 
-blockquote p::before {
-  content: "-";
+.quote::before {
+  content: '"';
+}
+
+.quote::after {
+  content: '"';
 }
 
 h2, h3, dl {
@@ -196,7 +200,6 @@ footer {
 
   body {
     background: rgb(230, 219, 219);
-    font-size: large;
   }
 
   .menu-btn {
