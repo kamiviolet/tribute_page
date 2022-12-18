@@ -52,22 +52,16 @@ for (const slide of slides) {
   }, 12000);
 })()
 
-/*
-const images = document.querySelectorAll(".slides");
-let index = 0;
+//Fading overflow
+const expandingBtn = document.querySelector(".expand_button");
 
-(function changeSlide() {
-  images.forEach((image)=>{
-    image.style.display = "none";
-  })
-
-  images[index].style.display = "block";
-  index++;
-      
-  if (index === images.length) {
-    index = 0;
+document.addEventListener("click", (event)=>{
+  if (event.target === expandingBtn) {
+    event.target.parentElement.classList.toggle("foldable");
+    event.target.classList.toggle("hidding_text");
+    event.target.innerHTML = "Show less";
+    if (expandingBtn.classList.contains("hidding_text")) {
+      event.target.innerHTML = "Read more";
+    }
   }
-
-  setTimeout(changeSlide, 10000);
-})()
-*/
+})

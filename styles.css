@@ -131,20 +131,45 @@ article p:first-of-type::first-letter {
 }
 
 article a:last-of-type {
-
   display: block;
   padding: 15px 30px;
   text-align: right;
 }
 
-article:first-of-type,
-article:first-of-type :is(h2, a) {
+.about,
+.about h2 {
+  position: relative;
   font-style: italic;
   color:hsl(36, 24%, 22%);
   text-align: center;
 
   padding-inline: 1.5em;
   background-color: hsl(56, 100%, 97%);
+}
+
+.foldable {
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.expand_button {
+  display: block;
+  margin: 0;
+  padding-block: 50px;
+
+  background: hsl(56, 100%, 97%);
+  cursor: pointer;
+}
+
+.hidding_text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-block-start: 75px;
+
+  width: 100%;
+  height: 150px;
+  mask-image: linear-gradient(to top, black 75%, transparent 100%);
 }
 
 footer {
