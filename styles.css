@@ -122,9 +122,13 @@ nav {
   animation: fadein 3s;
 }
 
+.slide_description {
+  display: none;
+}
+
 @keyframes fadein {
   from {
-    opacity: 0.5;
+    opacity: 0.75;
   }  
   to {
     opacity: 1;
@@ -180,7 +184,7 @@ article a:last-of-type {
   left: 0;
   padding-block-start: 75px;
 
-  height: 150px;
+  height: 175px;
   mask-image: linear-gradient(to top, black 75%, transparent 100%);
 }
 
@@ -193,7 +197,7 @@ footer {
   justify-content: center;
   align-items: center;
 
-  background-color: hsl(0, 35%, 93%)
+  background: hsl(0, 35%, 93%);
 }
 
 @media screen and (min-width: 1024px) {
@@ -209,6 +213,23 @@ footer {
   header, .dropdown-container, .slideshow-container, main, footer {
     width: 90vw;
     max-width: 1024px;
+  }
+  
+  .slide_desciption {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+
+    min-width: 350px;
+    padding: 1.5em;
+
+    font-size: larger;
+    color: white;
+    background: hsl(0, 28%, 54%);
+    box-shadow: rgba(42, 25, 25, 0.6) -10px 5px 3px;
+    z-index: 10;
+    animation: fadein 3s;
   }
 
   .slideshow-container {

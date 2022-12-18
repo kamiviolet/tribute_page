@@ -36,12 +36,14 @@ for (const slide of slides) {
 
 (function slideshow(index = 0) {
   const images = document.querySelectorAll(".slides");
+  const descriptor = document.querySelector(".slide_desciption");
     
   images.forEach((image)=>{
   image.style.display = "none";
   })
 
   images[index].style.display = "block";
+  descriptor.innerHTML = slides[index]["alt"];
 
   index++;
 
