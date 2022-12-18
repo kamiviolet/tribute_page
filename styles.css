@@ -1,1 +1,202 @@
-/* Copy and paste your CSS from CodePen into here */
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+a {
+  color: darkred;
+}
+
+h2, h3, dl {
+  font-weight: 400;
+  margin: 0;
+}
+
+h2 {
+  background: hsl(0, 25%, 45%);
+  color: white;
+}
+
+h3 {
+  background: hsl(0, 37%, 77%);
+}
+
+body {
+  font-size: large;
+  font-family: 'Barlow', sans-serif;
+  color: hsl(0, 0%, 15%);
+  line-height: 2em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  
+  overflow-x: hidden;
+}
+
+.wrapper {
+  box-shadow: rgb(133, 105, 97) 0 -5px 5px;
+}
+
+header, main {
+  background: white;
+}
+
+header {
+  text-align: center;
+  padding-block: 5vh;
+}
+
+header p {
+  padding-inline: 0;
+}
+
+nav {
+  text-align: center;
+}
+
+.menu-btn, .dropdown-container > a {
+  width: 100vw;
+  padding-block: 0.75em;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.menu-btn {
+  text-transform: uppercase;
+  background-color: hsl(0, 0%, 40%);
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-container {
+  display: none;
+  position: relative;
+}
+
+.dropdown-container > a {
+  display: block;
+  background-color: hsl(0, 35%, 93%);
+}
+
+.dropdown-container > a:hover {
+  background:hsl(0, 25%, 50%);
+  color: white;
+}
+
+.show {
+  display: block;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100vw;
+  height: 32.5vh;
+  overflow: hidden;
+  line-height: 0;
+  background-color: black;
+}
+
+.slides {
+  position: absolute;
+  width: inherit;
+  object-fit: cover;
+  object-position: 100% 20%;
+  animation: fadein 3s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0.5;
+  }  
+  to {
+    opacity: 1;
+  }
+}
+
+article :is(h2, h3, dl) {
+  padding-block: 20px;
+}
+
+article :is(p, h2, h3, h4, dl) {
+  padding-inline: 30px;
+}
+
+article p:first-of-type::first-letter {
+  font-size: xx-large;
+}
+
+article a:last-of-type {
+
+  display: block;
+  padding: 15px 30px;
+  text-align: right;
+}
+
+article:first-of-type,
+article:first-of-type :is(h2, a) {
+  font-style: italic;
+  color:hsl(36, 24%, 22%);
+  text-align: center;
+
+  padding-inline: 1.5em;
+  background-color: hsl(56, 100%, 97%);
+}
+
+footer {
+  height: 100px;
+  width: 100vw;
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: hsl(0, 35%, 93%)
+}
+
+@media screen and (min-width: 1024px) {
+
+  body {
+    background: rgb(230, 219, 219);
+    font-size: large;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  header, .dropdown-container, .slideshow-container, main, footer {
+    width: 90vw;
+    max-width: 1024px;
+  }
+
+  .slideshow-container {
+    height: 550px;
+  }
+
+  .slideshow-container img {
+    width: 100%;
+    height: inherit;
+  }
+
+  .dropdown-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: static;
+  }
+
+  .dropdown-container > a {
+    flex: 1 1 125px;
+    font-size: large;
+  }
+
+  article:first-of-type {
+    padding-inline: 5em;
+  }
+}
