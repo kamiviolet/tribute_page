@@ -36,22 +36,31 @@ const slides = [
 const slideshowWrapper = document.querySelector(".slideshow-container");
 
 for (const slide of slides) {
-  let picture = document.createElement("img");
+  const picture = document.createElement("img");
+  const description = document.createElement("p");
+
   picture.setAttribute("src", slide["src"]);
   picture.classList.add("slides");
   slideshowWrapper.append(picture);
+  
+  description.innerHTML = slide["alt"];
+  description.classList.add("slide_description");
+  slideshowWrapper.append(description);
 }
 
 (function slideshow(index = 0) {
   const images = document.querySelectorAll(".slides");
-  const descriptor = document.querySelector(".slide_desciption");
+  const descriptions = document.querySelectorAll(".slide_description");
     
   images.forEach((image)=>{
   image.style.display = "none";
   })
+  descriptions.forEach((description)=>{
+  description.style.display = "none";
+  })
 
   images[index].style.display = "block";
-  descriptor.innerHTML = slides[index]["alt"];
+  descriptions[index].style.display = "block";
 
   index++;
 
@@ -61,7 +70,7 @@ for (const slide of slides) {
 
   setTimeout(()=>{
     slideshow(index)
-  }, 12000);
+  }, 25000);
 })()
 
 //Fading overflow
