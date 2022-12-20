@@ -44,7 +44,7 @@ for (const slide of slides) {
   slideshowWrapper.append(picture);
   
   description.innerHTML = slide["alt"];
-  description.classList.add("slide_description");
+  description.classList.add("slide_description", "hidden");
   slideshowWrapper.append(description);
 }
 
@@ -56,11 +56,11 @@ for (const slide of slides) {
   image.style.display = "none";
   })
   descriptions.forEach((description)=>{
-  description.style.display = "none";
+  description.classList.replace("show", "hidden");
   })
 
   images[index].style.display = "block";
-  descriptions[index].style.display = "block";
+  descriptions[index].classList.replace("hidden", "show");
 
   index++;
 
