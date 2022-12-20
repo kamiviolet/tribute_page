@@ -136,11 +136,14 @@ header, nav {
 @keyframes fadein {
   0% {
     opacity: 0;
-    filter: blur(1em);
+    filter: blur(1em) sepia(100%);
   }  
   30% {
     opacity: 1;
     filter: blur(0);
+  }
+  50% {
+    filter: sepia(0);
   }
   80% {
     opacity: 1;
@@ -261,6 +264,7 @@ footer .icon-wrapper {
     color: var(--color_lightestForContrast);
     text-shadow: var(--color_shadow) 3px 1px 1px;
     background: var(--color_secondary);
+    box-shadow: var(--color_tertiary) 30px 20px 0;
     animation: slidein 25s linear;
   }
 
@@ -268,6 +272,7 @@ footer .icon-wrapper {
     0% {
       opacity: 0;
       transform: translateX(400px);
+      filter: drop-shadow(4px 4px 2px black);
     }  
     10% {
       opacity: .9;
@@ -275,25 +280,11 @@ footer .icon-wrapper {
     }
     90% {
       opacity: .9;
+      filter: drop-shadow(4px 4px 2px black);
     }
     100% {
       opacity: 0;
     }
-  }
-
-  .deco_bar {
-    display: block;
-    position: absolute;
-    
-    bottom: 45px;
-    right: 0;
-
-    width: 60%;
-    height: 10px;
-    background-color: var(--color_lightestForContrast);
-    box-shadow: var(--color_shadow) 5px 5px 10px;
-
-    animation: slidein 25s ease-out infinite;
   }
 
   .dropdown-container {
