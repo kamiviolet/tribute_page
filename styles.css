@@ -119,7 +119,7 @@ header, nav {
 
 .slideshow-container {
   position: relative;
-  height: 40vh;
+  height: 300px;
   overflow: hidden;
   line-height: 0;
   background-color: black;
@@ -152,6 +152,10 @@ header, nav {
 
 .slide_description {
   visibility: hidden;
+}
+
+.deco_bar {
+  display: none;
 }
 
 .menu-btn, article :is(h2, h3, dl) {
@@ -246,7 +250,7 @@ footer .icon-wrapper {
     visibility: visible;
 
     position: absolute;
-    bottom: 30px;
+    bottom: 40px;
     right: 0;
 
     min-width: 350px;
@@ -255,8 +259,8 @@ footer .icon-wrapper {
     font-size: larger;
     opacity: .9;
     color: var(--color_lightestForContrast);
+    text-shadow: var(--color_shadow) 3px 1px 1px;
     background: var(--color_secondary);
-    box-shadow: var(--color_shadow) 10px 5px 3px;
     animation: slidein 25s linear;
   }
 
@@ -275,6 +279,21 @@ footer .icon-wrapper {
     100% {
       opacity: 0;
     }
+  }
+
+  .deco_bar {
+    display: block;
+    position: absolute;
+    
+    bottom: 45px;
+    right: 0;
+
+    width: 60%;
+    height: 10px;
+    background-color: var(--color_lightestForContrast);
+    box-shadow: var(--color_shadow) 5px 5px 10px;
+
+    animation: slidein 25s ease-out infinite;
   }
 
   .dropdown-container {
